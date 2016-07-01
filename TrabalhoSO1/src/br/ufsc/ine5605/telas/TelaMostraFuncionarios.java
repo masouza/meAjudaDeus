@@ -9,6 +9,7 @@ import br.ufsc.ine5605.Controladores.ControladorFuncionario;
 import br.ufsc.ine5605.Controladores.ControladorGeral;
 import br.ufsc.ine5605.codigos.Funcionario;
 import java.awt.GridLayout;
+import java.text.SimpleDateFormat;
 import java.util.Set;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -49,6 +50,7 @@ public class TelaMostraFuncionarios extends JFrame {
     }
 
     public void updateData(){
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         DefaultTableModel modelTbFuncionarios = new DefaultTableModel();
         modelTbFuncionarios.addColumn("Matricula");
         modelTbFuncionarios.addColumn("Nome");
@@ -66,6 +68,7 @@ public class TelaMostraFuncionarios extends JFrame {
             if(chave!=null){
             modelTbFuncionarios.addRow(new Object[] {owner.getFuncionarios().get(chave).getMatricula(),owner.getFuncionarios().get(chave).getNome(),
                 owner.getFuncionarios().get(chave).getTelefone(),owner.getFuncionarios().get(chave).getSalario(), owner.getFuncionarios().get(chave).getCargo().getTipoCargo(),
+                sdf.format(owner.getFuncionarios().get(chave).getNascimento()),
             });
         }
         
