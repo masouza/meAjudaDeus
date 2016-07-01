@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Aluno2
  */
-public class TelaMostraFuncionarios extends JFrame {
+public class teste extends JFrame {
 
     private JPanel painelFundo;
     private JTable tabela;
@@ -28,7 +28,7 @@ public class TelaMostraFuncionarios extends JFrame {
     private ControladorFuncionario owner;
 
 
-    public TelaMostraFuncionarios(ControladorFuncionario owner) {
+    public teste(ControladorFuncionario owner) {
         super("Funcionarios");
            this.owner=owner;
            criaJanela();
@@ -65,7 +65,7 @@ public class TelaMostraFuncionarios extends JFrame {
         for (Integer chave : chaves) {
             if(chave!=null){
             modelTbFuncionarios.addRow(new Object[] {owner.getFuncionarios().get(chave).getMatricula(),owner.getFuncionarios().get(chave).getNome(),
-                owner.getFuncionarios().get(chave).getTelefone(),owner.getFuncionarios().get(chave).getSalario(), owner.getFuncionarios().get(chave).getCargo().getTipoCargo(),
+                owner.getFuncionarios().get(chave).getTelefone(),owner.getFuncionarios().get(chave).getSalario(), owner.getFuncionarios().get(chave).getCargo(),
             });
         }
         
@@ -76,13 +76,13 @@ public class TelaMostraFuncionarios extends JFrame {
     
     
     
-    public void inicia() {
+    public void Inicia() {
         setVisible(true);
     }
-    
-        public void fecha() {
-        setVisible(false);
+
+    public static void main(String[] args) {
+        ControladorGeral ownerr=new ControladorGeral();
+        ControladorFuncionario owner = new ControladorFuncionario(ownerr);
+        teste teste = new teste(owner);
     }
-
-
 }

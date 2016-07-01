@@ -84,14 +84,14 @@ public class ControladorFuncionario {
     
     
     
-    public void addFuncionario(Integer matricula, String nome, long telefone, float salario, Date nascimento,TipoCargo cargo) {
+    public void addFuncionario(Integer matricula, String nome, long telefone, float salario, Date nascimento,Cargo cargo) {
         Funcionario funcionario = new Funcionario();
         funcionario.setMatricula(matricula);
         funcionario.setNome(nome);
         funcionario.setTelefone(telefone);
         funcionario.setSalario(salario);
         funcionario.setNascimento(nascimento);
-        //funcionario.setCargo(cargo);
+        funcionario.setCargo(cargo);
         funcionarios.put(matricula, funcionario);
     }
 

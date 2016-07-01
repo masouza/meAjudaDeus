@@ -156,7 +156,7 @@ public class TelaAddFuncionario extends JFrame {
 
                 }
                 int codigo = Integer.parseInt(jFCargo.getText());
-                TipoCargo cargo = owner.findCargo(codigo).getTipoCargo();
+                Cargo cargo = owner.findCargo(codigo);
 
                 String valida = labelMat.getText();
                 String valida2 = labelNome.getText();
