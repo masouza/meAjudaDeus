@@ -5,13 +5,16 @@
  */
 package br.ufsc.ine5605.codigos;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
- * @author renan
+ * @author NEGO BAM
  */
-public class Funcionario {
+public class Funcionario implements Serializable{
+    
+    private static final long serialVersionUID = 1L;
     private Integer matricula;
     private String nome;
     private long telefone;

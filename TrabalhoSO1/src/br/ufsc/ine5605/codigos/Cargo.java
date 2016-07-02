@@ -5,11 +5,16 @@
  */
 package br.ufsc.ine5605.codigos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author renan
  */
-public class Cargo {
+public class Cargo implements Serializable{
+    
+    
+    private static final long serialVersionUID = 1L;
     private Integer codigo;
     private String nome;
     private TipoCargo tipoCargo;
